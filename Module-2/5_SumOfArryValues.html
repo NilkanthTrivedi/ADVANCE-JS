@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let salaries = {
+                John: 100,
+                Pete: 300,
+                Mary: 250,
+            };
+            // console.log(salaries);
+            // console.log(Object.keys(salaries).length);
+
+            // let x = 0;
+            // for (p in salaries) {
+            //     x += salaries[p];
+            //     console.log(x);
+            // }
+            function salsum() {
+                let sum = Object.values(salaries);
+                console.log(sum);
+                if (sum.length != 0) {
+                    let x = 0;
+                    for (p in sum) {
+                        x += sum[p];
+                    }
+                    alert(x);
+                } else {
+                    console.log(0);
+                }
+            }
+            salsum();
+        </script>
+    </body>
+</html>

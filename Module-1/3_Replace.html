@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>Are You The Same person ?</h2>
+        <span id="msg"></span>
+        <br />
+        <br />
+        <button onclick="check()">Confirm</button>
+
+        <script>
+            function check() {
+                let z = confirm("Are You Sure ?");
+                let m = document.getElementById("msg");
+
+                if (z) {
+                    m.innerHTML = "You Agreed";
+                } else {
+                    m.innerHTML = "You did not agreed";
+                }
+            }
+        </script>
+    </body>
+</html>

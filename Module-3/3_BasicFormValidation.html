@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="" onsubmit="return validata()">
+            <table border="1" align="center">
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input
+                            type="text"
+                            name=""
+                            id="name"
+                            onblur="validata(this,'nameError')"
+                        /><span id="nameError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E-Mail:</td>
+                    <td>
+                        <input
+                            type="text"
+                            name=""
+                            id="email"
+                            onblur="validata(this,'mailError')"
+                        /><span id="mailError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile:</td>
+                    <td>
+                        <input
+                            type="number"
+                            name=""
+                            id="mbl"
+                            onblur="validata(this,'mblError')"
+                        /><span id="mblError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input
+                            type="password"
+                            name=""
+                            id="pwd"
+                            onblur="validata(this,'pwdError')"
+                        /><span id="pwdError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="" id="" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+
+<script>
+    function validata(v, error) {
+        if (v.value == "") {
+            let x = document.getElementById(error);
+            x.innerHTML = " * Required";
+            console.log(v.value);
+            return false;
+        } else {
+            let x = document.getElementById(error);
+            x.innerHTML = "";
+            console.log(v.value);
+            return true;
+        }
+    }
+</script>

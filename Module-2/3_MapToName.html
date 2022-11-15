@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let john = { name: "John", age: 25 };
+
+            let pete = { name: "Pete", age: 30 };
+
+            let mary = { name: "Mary", age: 28 };
+
+            let users = [john, pete, mary];
+
+            let name =
+                users[0].name + " " + users[1].name + " " + users[2].name;
+            console.log(name);
+
+            for (p in users) {
+                // console.log(users[p]);
+                console.log(users[p].name);
+            }
+        </script>
+    </body>
+</html>

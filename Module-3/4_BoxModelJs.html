@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            .main {
+                width: 50%;
+                height: auto;
+                margin: auto;
+                background-color: gray;
+                text-align: end;
+                padding: 10px;
+                border-radius: 10px;
+                color: white;
+                z-index: 5;
+                display: none;
+            }
+            .main .defination {
+                text-align: center;
+                padding: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>What Is JavaScript ?</h1>
+        <button onclick="setTimeout(show,500)">Click Here...!</button>
+        <div class="main" id="box">
+            <button onclick="setTimeout(hide,500)">X</button>
+            <div class="defination" id="info">
+                <h1>JavaScript :</h1>
+                <h2>
+                    JavaScript is a lightweight interpreted programming
+                    language. The web browser receives the JavaScript code in
+                    its original text form and runs the script from that.
+                </h2>
+                <button onclick="setTimeout(hide,500)">Close</button>
+            </div>
+        </div>
+
+        <script>
+            function show() {
+                let x = document.getElementById("box");
+                console.log(x);
+                x.style.display = "block";
+            }
+            function hide() {
+                let x = document.getElementById("box");
+                console.log(x);
+                x.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
